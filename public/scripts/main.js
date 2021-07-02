@@ -24,10 +24,10 @@ function handleClick(event, check = true) {
   const form = document.querySelector(".modal form");
 
   const roomId = document.querySelector("#room-id").dataset.id;
-  const slug = check ? "check" : "delete";
+  const action = check ? "check" : "delete";
   const questionId = event.target.dataset.id;
 
-  form.setAttribute("action", `/question/${roomId}/${questionId}/${slug}`);
+  form.setAttribute("action", `/question/${roomId}/${questionId}/${action}`);
 
   modalTitle.innerHTML = check ? "Marcar como lido" : "Excluir";
   modalDescription.innerHTML = check

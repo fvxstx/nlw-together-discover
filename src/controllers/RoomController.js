@@ -56,6 +56,13 @@ module.exports = {
       roomId: roomId,
       questions: questions,
       questionsRead: questionsRead,
+      isNoQuestions: isNoQuestions,
     });
+  },
+
+  enter(req, res) {
+    const roomId = req.body.roomId;
+
+    res.redirect(`/room/${roomId}`);
   },
 };
